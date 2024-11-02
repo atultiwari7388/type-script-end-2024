@@ -54,9 +54,28 @@
 // zyx();
 // console.log("hello");
 
-function data(a: number, b: string): void {
-  a = 12;
-  b = "Kalua";
+// function data(a: number, b: string): void {
+//   a = 12;
+//   b = "Kalua";
+// }
+
+// console.log(data);
+
+//Interface and type alias
+
+//lets create interface for obj
+
+interface UserData {
+  name: string;
+  email: string;
+  pass: string;
+  gender?: string; //optional
 }
 
-console.log(data);
+function getUserOfData(obj: UserData) {}
+
+getUserOfData({
+  name: "Dimple",
+  email: "dimple@gmail.com",
+  pass: "dimple@123",
+});
