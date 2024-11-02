@@ -8,3 +8,8 @@ console.log(c);
 
 let arr = []; //blank array
 const abc = [1, 2, 3, 4]; //fill array
+
+//tuples
+let data: [number, string] = [89, "Moti"];
+
+console.log(data);
