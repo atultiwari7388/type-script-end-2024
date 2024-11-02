@@ -21,3 +21,23 @@ var StatusCode;
     StatusCode["NOT_FOUND"] = "404 not_found";
 })(StatusCode || (StatusCode = {}));
 StatusCode.NOT_FOUND;
+//any , unknown
+// let d;
+// let a: unknown;
+// a = 12;
+// a = "Moti";
+let z;
+z = 12;
+z = "Moti";
+if (typeof z == "string")
+    z.toUpperCase();
+//void
+function xyz() {
+    console.log("Your name is Kalua");
+}
+//never
+function zyx() {
+    while (true) { }
+}
+zyx();
+console.log("hello");
