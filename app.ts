@@ -72,10 +72,20 @@ interface UserData {
   gender?: string; //optional
 }
 
-function getUserOfData(obj: UserData) {}
+// function getUserOfData(obj: UserData) {}
 
-getUserOfData({
-  name: "Dimple",
-  email: "dimple@gmail.com",
-  pass: "dimple@123",
-});
+// getUserOfData({
+//   name: "Dimple",
+//   email: "dimple@gmail.com",
+//   pass: "dimple@123",
+// });
+
+// Extending Interfaces
+
+interface Admin extends UserData {
+  admin: boolean;
+}
+
+function loginAdmin(obj: Admin) {
+  obj.admin;
+}
