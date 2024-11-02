@@ -209,9 +209,16 @@
 
 //optional and default parameter
 
-function abcd(name: string, age: number, gender?: string) {
-  console.log(name, age, gender);
+// function abcd(name: string, age: number, gender?: string) {
+//   console.log(name, age, gender);
+// }
+
+// abcd("Kalua", 22, "Male");
+// abcd("Gora", 25);
+
+//rest parameters
+function sum(...arr: number[]) {
+  console.log(arr);
 }
 
-abcd("Kalua", 22, "Male");
-abcd("Gora", 25);
+sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
