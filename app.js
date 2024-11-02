@@ -156,7 +156,9 @@
 // abcd("Kalua", 22, "Male");
 // abcd("Gora", 25);
 //rest parameters
-function sum(...arr) {
-    console.log(arr);
-}
-sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+// function sum(...arr: number[]) {
+//   console.log(arr);
+// }
+// sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+//generics
+function abcd() { }
