@@ -1,5 +1,5 @@
 "use strict";
 // //primitive types
-function loginAdmin(obj) {
-    obj.admin;
-}
+let a;
+function abcd(obj) { }
+abcd("Kalua");

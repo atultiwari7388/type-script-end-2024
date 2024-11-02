@@ -65,12 +65,12 @@
 
 //lets create interface for obj
 
-interface UserData {
-  name: string;
-  email: string;
-  pass: string;
-  gender?: string; //optional
-}
+// interface UserData {
+//   name: string;
+//   email: string;
+//   pass: string;
+//   gender?: string; //optional
+// }
 
 // function getUserOfData(obj: UserData) {}
 
@@ -82,10 +82,19 @@ interface UserData {
 
 // Extending Interfaces
 
-interface Admin extends UserData {
-  admin: boolean;
-}
+// interface Admin extends UserData {
+//   admin: boolean;
+// }
 
-function loginAdmin(obj: Admin) {
-  obj.admin;
-}
+// function loginAdmin(obj: Admin) {
+//   obj.admin;
+// }
+
+//type alias
+
+type value = string | number | null;
+
+let a: value;
+
+function abcd(obj: value) {}
+abcd("Kalua");
