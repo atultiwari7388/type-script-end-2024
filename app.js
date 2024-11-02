@@ -132,16 +132,20 @@
 // let b1 = new MetalBottleMaker();
 // b1.changeName();
 //getter and setter
-class User {
-    constructor(_name, _age) {
-        this._name = _name;
-        this._age = _age;
-    }
-    get name() {
-        return this._name;
-    }
-    set setMyName(value) {
-        this._name = value;
-    }
+// class User {
+//   constructor(public _name: string, public _age: number) {}
+//   get name() {
+//     return this._name;
+//   }
+//   set setMyName(value: string) {
+//     this._name = value;
+//   }
+// }
+// let u1 = new User("Kalua", 22);
+//Function Types
+function abcd(name, age, sb) {
+    sb("hello");
 }
-let u1 = new User("Kalua", 22);
+abcd("Kalua", 25, (arg) => {
+    console.log("abcd");
+});

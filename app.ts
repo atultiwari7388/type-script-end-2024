@@ -183,16 +183,26 @@
 
 //getter and setter
 
-class User {
-  constructor(public _name: string, public _age: number) {}
+// class User {
+//   constructor(public _name: string, public _age: number) {}
 
-  get name() {
-    return this._name;
-  }
+//   get name() {
+//     return this._name;
+//   }
 
-  set setMyName(value: string) {
-    this._name = value;
-  }
+//   set setMyName(value: string) {
+//     this._name = value;
+//   }
+// }
+
+// let u1 = new User("Kalua", 22);
+
+//Function Types
+
+function abcd(name: string, age: string, sb: (arg: string) => void) {
+  sb("hello");
 }
 
-let u1 = new User("Kalua", 22);
+abcd("Kalua", 25, (arg: string) => {
+  console.log("abcd");
+});
