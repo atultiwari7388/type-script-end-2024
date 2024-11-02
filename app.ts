@@ -92,9 +92,33 @@
 
 //type alias
 
-type value = string | number | null;
+// type value = string | number | null;
 
-let a: value;
+// let a: value;
 
-function abcd(obj: value) {}
-abcd("Kalua");
+// function abcd(obj: value) {}
+// abcd("Kalua");
+
+//Classes and Objects
+
+class Device {
+  name = "Lg";
+  price = 12000;
+  cat = "digital";
+}
+
+let d1 = new Device();
+
+//constructor
+
+class BottleMaker {
+  constructor(
+    public brand: string,
+    public price: number,
+    public color: string,
+    public material: string
+  ) {}
+}
+
+let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
+let b2 = new BottleMaker("Cello", 500, "white", "silver");
