@@ -106,19 +106,33 @@
 // }
 // let b1 = new BottleMaker("Milton");
 // b1.changeBottleName();
+// class BottleMaker {
+//   public kalua: string = "kalua";
+//   constructor(public name: string) {}
+// }
+// class MetalBottleMaker extends BottleMaker {
+//   constructor(name: string) {
+//     super(name);
+//   }
+//   getValue() {
+//     console.log(this.name, this.kalua);
+//   }
+// }
+// let b1 = new MetalBottleMaker("Chilton");
+// b1.getValue();
 class BottleMaker {
-    constructor(name) {
-        this.name = name;
-        this.kalua = "kalua";
+    constructor() {
+        this.name = "Milton";
     }
 }
 class MetalBottleMaker extends BottleMaker {
-    constructor(name) {
-        super(name);
+    constructor() {
+        super(...arguments);
+        this.material = "metal";
     }
-    getValue() {
-        console.log(this.name, this.kalua);
+    changeName() {
+        this.name = "Kalua";
     }
 }
-let b1 = new MetalBottleMaker("Chilton");
-b1.getValue();
+let b1 = new MetalBottleMaker();
+b1.changeName();

@@ -148,20 +148,35 @@
 // let b1 = new BottleMaker("Milton");
 // b1.changeBottleName();
 
+// class BottleMaker {
+//   public kalua: string = "kalua";
+//   constructor(public name: string) {}
+// }
+
+// class MetalBottleMaker extends BottleMaker {
+//   constructor(name: string) {
+//     super(name);
+//   }
+
+//   getValue() {
+//     console.log(this.name, this.kalua);
+//   }
+// }
+
+// let b1 = new MetalBottleMaker("Chilton");
+// b1.getValue();
+
 class BottleMaker {
-  public kalua: string = "kalua";
-  constructor(public name: string) {}
+  protected name = "Milton";
 }
 
 class MetalBottleMaker extends BottleMaker {
-  constructor(name: string) {
-    super(name);
-  }
+  public material = "metal";
 
-  getValue() {
-    console.log(this.name, this.kalua);
+  changeName() {
+    this.name = "Kalua";
   }
 }
 
-let b1 = new MetalBottleMaker("Chilton");
-b1.getValue();
+let b1 = new MetalBottleMaker();
+b1.changeName();
