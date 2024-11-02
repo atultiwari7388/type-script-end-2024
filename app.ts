@@ -122,3 +122,13 @@ class BottleMaker {
 
 let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
 let b2 = new BottleMaker("Cello", 500, "white", "silver");
+
+//this keyboard
+class ABCD {
+  name = "Dimple";
+
+  changeName() {
+    this.name = "Moti";
+    console.log(this.name);
+  }
+}
