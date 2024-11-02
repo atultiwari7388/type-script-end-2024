@@ -8,4 +8,15 @@ let arr = []; //blank array
 const abc = [1, 2, 3, 4]; //fill array
 //tuples
 let data = [89, "Moti"];
-console.log(data);
+//enums
+var UserData;
+(function (UserData) {
+    UserData["ADMIN"] = "admin";
+    UserData["GUEST"] = "guest";
+    UserData["SUPER_ADMIN"] = "super_admin";
+})(UserData || (UserData = {}));
+var StatusCode;
+(function (StatusCode) {
+    StatusCode["ABANDONED"] = "kalua kalua kalua 500";
+    StatusCode["NOT_FOUND"] = "404 not_found";
+})(StatusCode || (StatusCode = {}));
