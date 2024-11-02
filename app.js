@@ -120,19 +120,28 @@
 // }
 // let b1 = new MetalBottleMaker("Chilton");
 // b1.getValue();
-class BottleMaker {
-    constructor() {
-        this.name = "Milton";
+// class BottleMaker {
+//   protected name = "Milton";
+// }
+// class MetalBottleMaker extends BottleMaker {
+//   public material = "metal";
+//   changeName() {
+//     this.name = "Kalua";
+//   }
+// }
+// let b1 = new MetalBottleMaker();
+// b1.changeName();
+//getter and setter
+class User {
+    constructor(_name, _age) {
+        this._name = _name;
+        this._age = _age;
+    }
+    get name() {
+        return this._name;
+    }
+    set setMyName(value) {
+        this._name = value;
     }
 }
-class MetalBottleMaker extends BottleMaker {
-    constructor() {
-        super(...arguments);
-        this.material = "metal";
-    }
-    changeName() {
-        this.name = "Kalua";
-    }
-}
-let b1 = new MetalBottleMaker();
-b1.changeName();
+let u1 = new User("Kalua", 22);

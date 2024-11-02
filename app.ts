@@ -166,17 +166,33 @@
 // let b1 = new MetalBottleMaker("Chilton");
 // b1.getValue();
 
-class BottleMaker {
-  protected name = "Milton";
-}
+// class BottleMaker {
+//   protected name = "Milton";
+// }
 
-class MetalBottleMaker extends BottleMaker {
-  public material = "metal";
+// class MetalBottleMaker extends BottleMaker {
+//   public material = "metal";
 
-  changeName() {
-    this.name = "Kalua";
+//   changeName() {
+//     this.name = "Kalua";
+//   }
+// }
+
+// let b1 = new MetalBottleMaker();
+// b1.changeName();
+
+//getter and setter
+
+class User {
+  constructor(public _name: string, public _age: number) {}
+
+  get name() {
+    return this._name;
+  }
+
+  set setMyName(value: string) {
+    this._name = value;
   }
 }
 
-let b1 = new MetalBottleMaker();
-b1.changeName();
+let u1 = new User("Kalua", 22);
