@@ -143,9 +143,15 @@
 // }
 // let u1 = new User("Kalua", 22);
 //Function Types
-function abcd(name, age, sb) {
-    sb("hello");
+// function abcd(name: string, age: string, sb: (arg: string) => void) {
+//   sb("hello");
+// }
+// abcd("Kalua", 25, (arg: string) => {
+//   console.log("abcd");
+// });
+//optional and default parameter
+function abcd(name, age, gender) {
+    console.log(name, age, gender);
 }
-abcd("Kalua", 25, (arg) => {
-    console.log("abcd");
-});
+abcd("Kalua", 22, "Male");
+abcd("Gora", 25);

@@ -199,10 +199,19 @@
 
 //Function Types
 
-function abcd(name: string, age: string, sb: (arg: string) => void) {
-  sb("hello");
+// function abcd(name: string, age: string, sb: (arg: string) => void) {
+//   sb("hello");
+// }
+
+// abcd("Kalua", 25, (arg: string) => {
+//   console.log("abcd");
+// });
+
+//optional and default parameter
+
+function abcd(name: string, age: number, gender?: string) {
+  console.log(name, age, gender);
 }
 
-abcd("Kalua", 25, (arg: string) => {
-  console.log("abcd");
-});
+abcd("Kalua", 22, "Male");
+abcd("Gora", 25);
