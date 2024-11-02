@@ -101,34 +101,67 @@
 
 //Classes and Objects
 
-class Device {
-  name = "Lg";
-  price = 12000;
-  cat = "digital";
-}
+// class Device {
+//   name = "Lg";
+//   price = 12000;
+//   cat = "digital";
+// }
 
-let d1 = new Device();
+// let d1 = new Device();
 
-//constructor
+// //constructor
+
+// class BottleMaker {
+//   constructor(
+//     public brand: string,
+//     public price: number,
+//     public color: string,
+//     public material: string
+//   ) {}
+// }
+
+// let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
+// let b2 = new BottleMaker("Cello", 500, "white", "silver");
+
+// //this keyboard
+// class ABCD {
+//   name = "Dimple";
+
+//   changeName() {
+//     this.name = "Moti";
+//     console.log(this.name);
+//   }
+// }
+
+//Access modifier , public , private
+
+// class BottleMaker {
+//   constructor(private name: string) {
+//     this.name = name;
+//   }
+
+//   changeBottleName() {
+//     this.name = "Kalua";
+//   }
+// }
+
+// let b1 = new BottleMaker("Milton");
+// b1.changeBottleName();
 
 class BottleMaker {
-  constructor(
-    public brand: string,
-    public price: number,
-    public color: string,
-    public material: string
-  ) {}
+  public kalua: string = "kalua";
+  constructor(public name: string) {}
 }
 
-let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
-let b2 = new BottleMaker("Cello", 500, "white", "silver");
+class MetalBottleMaker extends BottleMaker {
+  constructor(name: string) {
+    super(name);
+  }
 
-//this keyboard
-class ABCD {
-  name = "Dimple";
-
-  changeName() {
-    this.name = "Moti";
-    console.log(this.name);
+  getValue() {
+    console.log(this.name, this.kalua);
   }
 }
+
+let b1 = new MetalBottleMaker("Chilton");
+b1.getValue();

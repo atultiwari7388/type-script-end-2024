@@ -70,32 +70,55 @@
 // function abcd(obj: value) {}
 // abcd("Kalua");
 //Classes and Objects
-class Device {
-    constructor() {
-        this.name = "Lg";
-        this.price = 12000;
-        this.cat = "digital";
-    }
-}
-let d1 = new Device();
-//constructor
+// class Device {
+//   name = "Lg";
+//   price = 12000;
+//   cat = "digital";
+// }
+// let d1 = new Device();
+// //constructor
+// class BottleMaker {
+//   constructor(
+//     public brand: string,
+//     public price: number,
+//     public color: string,
+//     public material: string
+//   ) {}
+// }
+// let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
+// let b2 = new BottleMaker("Cello", 500, "white", "silver");
+// //this keyboard
+// class ABCD {
+//   name = "Dimple";
+//   changeName() {
+//     this.name = "Moti";
+//     console.log(this.name);
+//   }
+// }
+//Access modifier , public , private
+// class BottleMaker {
+//   constructor(private name: string) {
+//     this.name = name;
+//   }
+//   changeBottleName() {
+//     this.name = "Kalua";
+//   }
+// }
+// let b1 = new BottleMaker("Milton");
+// b1.changeBottleName();
 class BottleMaker {
-    constructor(brand, price, color, material) {
-        this.brand = brand;
-        this.price = price;
-        this.color = color;
-        this.material = material;
+    constructor(name) {
+        this.name = name;
+        this.kalua = "kalua";
     }
 }
-let b1 = new BottleMaker("Milton", 1200, "yellow", "metal");
-let b2 = new BottleMaker("Cello", 500, "white", "silver");
-//this keyboard
-class ABCD {
-    constructor() {
-        this.name = "Dimple";
+class MetalBottleMaker extends BottleMaker {
+    constructor(name) {
+        super(name);
     }
-    changeName() {
-        this.name = "Moti";
-        console.log(this.name);
+    getValue() {
+        console.log(this.name, this.kalua);
     }
 }
+let b1 = new MetalBottleMaker("Chilton");
+b1.getValue();
