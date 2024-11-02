@@ -24,3 +24,5 @@ enum StatusCode {
   ABANDONED = "kalua kalua kalua 500",
   NOT_FOUND = "404 not_found",
 }
+
+StatusCode.NOT_FOUND;

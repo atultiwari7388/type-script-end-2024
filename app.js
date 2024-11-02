@@ -20,3 +20,4 @@ var StatusCode;
     StatusCode["ABANDONED"] = "kalua kalua kalua 500";
     StatusCode["NOT_FOUND"] = "404 not_found";
 })(StatusCode || (StatusCode = {}));
+StatusCode.NOT_FOUND;
