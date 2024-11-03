@@ -206,3 +206,6 @@ function abcd(a, b, c) {
 abcd("hello", "Kalua", 45);
 //module import and export
 (0, payment_1.addPayment)("Mr. Kalua", "id_9876543", 45);
+//type assertion and type casting
+let a = Number("12");
+console.log(typeof a);

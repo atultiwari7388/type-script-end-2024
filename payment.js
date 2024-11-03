@@ -2,5 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addPayment = addPayment;
 function addPayment(a, b, c) {
-    return "Please add Payment Gateway";
+    console.log(a, b, c);
+    return "Hey";
 }

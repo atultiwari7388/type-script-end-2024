@@ -283,3 +283,7 @@ abcd("hello", "Kalua", 45);
 
 //module import and export
 addPayment<string>("Mr. Kalua", "id_9876543", 45);
+
+//type assertion and type casting
+let a = Number("12");
+console.log(typeof a);
