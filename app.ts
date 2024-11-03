@@ -266,24 +266,68 @@ import { addPayment } from "./payment";
 
 //generics classes
 
-class BottleMaker<T> {
-  constructor(public key: T) {}
+// class BottleMaker<T> {
+//   constructor(public key: T) {}
+// }
+
+// let b1 = new BottleMaker<string>("Milton");
+
+// let b2 = new BottleMaker<number>(12);
+// console.log(b1, b2);
+
+// function abcd<T>(a: T, b: T, c: number): T {
+//   return "Kalua" as T;
+// }
+
+// abcd("hello", "Kalua", 45);
+
+// //module import and export
+// addPayment<string>("Mr. Kalua", "id_9876543", 45);
+
+// //type assertion and type casting
+// let a = Number("12");
+// console.log(typeof a);
+
+//type guards , narrowing (type of)
+
+function abcd(args: string | number) {
+  if (typeof args == "number") {
+    return "number";
+  } else if (typeof args == "string") {
+    return "string";
+  } else {
+    return new Error("Recheck your code pagal  ");
+  }
 }
 
-let b1 = new BottleMaker<string>("Milton");
+console.log(abcd("Kalua"));
+console.log(abcd(45));
+// console.log(abcd(true));
 
-let b2 = new BottleMaker<number>(12);
-console.log(b1, b2);
-
-function abcd<T>(a: T, b: T, c: number): T {
-  return "Kalua" as T;
+class TvKaRemote {
+  switchTvOff() {
+    console.log("Tv ko off kr do");
+  }
 }
 
-abcd("hello", "Kalua", 45);
+class CarKaAc {
+  switchCarOff() {
+    console.log("Off kr de thulle");
+  }
+}
 
-//module import and export
-addPayment<string>("Mr. Kalua", "id_9876543", 45);
+const tv = new TvKaRemote();
+const car = new CarKaAc();
 
-//type assertion and type casting
-let a = Number("12");
-console.log(typeof a);
+function switchOffKro(device: CarKaAc | TvKaRemote) {
+  if (device instanceof TvKaRemote) {
+    device.switchTvOff();
+  } else if (device instanceof CarKaAc) {
+    device.switchCarOff();
+  } else {
+    throw new Error("Remote not found thulle");
+  }
+}
+
+switchOffKro(tv);
+switchOffKro(car);

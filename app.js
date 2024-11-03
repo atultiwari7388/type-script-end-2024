@@ -1,7 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// //primitive types
-const payment_1 = require("./payment");
 // let a = 12; //number
 // let b = true; //boolean
 // let c = "Moti"; //string
@@ -192,20 +190,58 @@ const payment_1 = require("./payment");
 //   key: "Monu",
 // });
 //generics classes
-class BottleMaker {
-    constructor(key) {
-        this.key = key;
+// class BottleMaker<T> {
+//   constructor(public key: T) {}
+// }
+// let b1 = new BottleMaker<string>("Milton");
+// let b2 = new BottleMaker<number>(12);
+// console.log(b1, b2);
+// function abcd<T>(a: T, b: T, c: number): T {
+//   return "Kalua" as T;
+// }
+// abcd("hello", "Kalua", 45);
+// //module import and export
+// addPayment<string>("Mr. Kalua", "id_9876543", 45);
+// //type assertion and type casting
+// let a = Number("12");
+// console.log(typeof a);
+//type guards , narrowing (type of)
+function abcd(args) {
+    if (typeof args == "number") {
+        return "number";
+    }
+    else if (typeof args == "string") {
+        return "string";
+    }
+    else {
+        return new Error("Recheck your code pagal  ");
     }
 }
-let b1 = new BottleMaker("Milton");
-let b2 = new BottleMaker(12);
-console.log(b1, b2);
-function abcd(a, b, c) {
-    return "Kalua";
+console.log(abcd("Kalua"));
+console.log(abcd(45));
+// console.log(abcd(true));
+class TvKaRemote {
+    switchTvOff() {
+        console.log("Tv ko off kr do");
+    }
 }
-abcd("hello", "Kalua", 45);
-//module import and export
-(0, payment_1.addPayment)("Mr. Kalua", "id_9876543", 45);
-//type assertion and type casting
-let a = Number("12");
-console.log(typeof a);
+class CarKaAc {
+    switchCarOff() {
+        console.log("Off kr de thulle");
+    }
+}
+const tv = new TvKaRemote();
+const car = new CarKaAc();
+function switchOffKro(device) {
+    if (device instanceof TvKaRemote) {
+        device.switchTvOff();
+    }
+    else if (device instanceof CarKaAc) {
+        device.switchCarOff();
+    }
+    else {
+        throw new Error("Remote not found thulle");
+    }
+}
+switchOffKro(tv);
+switchOffKro(car);
