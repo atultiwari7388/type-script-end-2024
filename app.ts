@@ -233,32 +233,49 @@
 // var arr2 = [...arr];
 
 //generics
-function abcd<T>(a: T, b: string, c: number) {}
+// function abcd<T>(a: T, b: string, c: number) {}
 
-abcd<string>("Halua", "Pudi", 5);
+// abcd<string>("Halua", "Pudi", 5);
 
-//generics functions
-function log<T>(val: T) {
-  console.log(val);
+// //generics functions
+// function log<T>(val: T) {
+//   console.log(val);
+// }
+
+// log<string>("Kalua");
+// log<number>(12);
+
+// //generics interfaces
+
+// interface Halua<T> {
+//   name: string;
+//   age: number;
+//   key: T;
+// }
+
+// function xyz(obj: Halua<string>) {
+//   console.log(obj );
+// }
+
+// xyz({
+//   name: "Kalua",
+//   age: 45,
+//   key: "Monu",
+// });
+
+//generics classes
+
+class BottleMaker<T> {
+  constructor(public key: T) {}
 }
 
-log<string>("Kalua");
-log<number>(12);
+let b1 = new BottleMaker<string>("Milton");
 
-//generics interfaces
+let b2 = new BottleMaker<number>(12);
+console.log(b1, b2);
 
-interface Halua<T> {
-  name: string;
-  age: number;
-  key: T;
+function abcd<T>(a: T, b: T, c: number): T {
+  return "Kalua" as T;
 }
 
-function xyz(obj: Halua<string>) {
-  console.log(obj );
-}
-
-xyz({
-  name: "Kalua",
-  age: 45,
-  key: "Monu",
-});
+abcd("hello", "Kalua", 45);

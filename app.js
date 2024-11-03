@@ -160,5 +160,45 @@
 //   console.log(arr);
 // }
 // sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+// function friends(...args: string[]) {
+//   console.log(args);
+// }
+// friends("Kalua", "Gaur", "Sau");
+// var arr = [1, 2, 3, 3, 4, 54, 5];
+// var arr2 = [...arr];
 //generics
-function abcd() { }
+// function abcd<T>(a: T, b: string, c: number) {}
+// abcd<string>("Halua", "Pudi", 5);
+// //generics functions
+// function log<T>(val: T) {
+//   console.log(val);
+// }
+// log<string>("Kalua");
+// log<number>(12);
+// //generics interfaces
+// interface Halua<T> {
+//   name: string;
+//   age: number;
+//   key: T;
+// }
+// function xyz(obj: Halua<string>) {
+//   console.log(obj );
+// }
+// xyz({
+//   name: "Kalua",
+//   age: 45,
+//   key: "Monu",
+// });
+//generics classes
+class BottleMaker {
+    constructor(key) {
+        this.key = key;
+    }
+}
+let b1 = new BottleMaker("Milton");
+let b2 = new BottleMaker(12);
+console.log(b1, b2);
+function abcd(a, b, c) {
+    return "Kalua";
+}
+abcd("hello", "Kalua", 45);
