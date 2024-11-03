@@ -1,5 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // //primitive types
+const payment_1 = require("./payment");
 // let a = 12; //number
 // let b = true; //boolean
 // let c = "Moti"; //string
@@ -202,3 +204,5 @@ function abcd(a, b, c) {
     return "Kalua";
 }
 abcd("hello", "Kalua", 45);
+//module import and export
+(0, payment_1.addPayment)("Mr. Kalua", "id_9876543", 45);

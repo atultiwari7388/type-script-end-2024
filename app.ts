@@ -1,4 +1,5 @@
 // //primitive types
+import { addPayment } from "./payment";
 
 // let a = 12; //number
 // let b = true; //boolean
@@ -279,3 +280,6 @@ function abcd<T>(a: T, b: T, c: number): T {
 }
 
 abcd("hello", "Kalua", 45);
+
+//module import and export
+addPayment<string>("Mr. Kalua", "id_9876543", 45);
